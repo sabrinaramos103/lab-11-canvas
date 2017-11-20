@@ -10,6 +10,21 @@
 var a = prompt("Enter a radius: ");
 var b = prompt("Enter a color: ");
 
+var aa = parseInt(a,10);
+
+
+if(b == "red"){
+	b == "#ff0000"
+}
+else if(b == "blue"){
+	b == "#0000ff"
+}
+else if(b == "green"){
+	b == "#00ff00"
+}
+else {
+	b = "#000000"
+}
 
 
 function draw() {
@@ -17,9 +32,9 @@ function draw() {
 	var sketch = document.getElementById('sketch');
 	var context = sketch.getContext("2d");
 
-    context.fillStyle = "var b"
+    context.fillStyle = b
     context.beginPath();
-    context.arc(50, 45, a, 0, 2 * Math.PI, true);
+    context.arc(50, 50, aa, 0, 2 * Math.PI, true);
     context.closePath();
     context.fill();
 }
