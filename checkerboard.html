@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body onload ="draw()">
+<canvas id="sketch" width="1000" height="1000">
+</canvas>
+<script>
+
+function draw() {
+//your drawing goes here
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+
+	var a = 0
+	var b = 25
+	var c = 0
+
+for(i = 1; i <= 8; i = i + 1){
+	if(i%2 == 0){
+		
+		context.fillStyle = "#000000"
+		context.fillRect (0, b, 45, 45)
+		context.fillStyle = "#ffffff"
+		context.fillRect (a, b, 45, 45)
+		context.fillStyle = "#ffffff"
+		context.fillRect (a, 70, 45, 45)
+		context.fillStyle = "#000000"
+		context.fillRect (90, b, 45, 45)
+		context.fillStyle = "#000000"
+		context.fillRect (180, b, 45, 45)
+		context.fillStyle = "#000000"
+		context.fillRect (270, b, 45, 45)
+	}
+	else{
+		//#bbbbbb = white
+		//#000000 = black
+		context.fillStyle = "#ffffff"
+		context.fillRect (0, b, 45, 45)
+		context.fillStyle = "#000000"
+		context.fillRect (45, b, 45, 45)
+		context.fillStyle = "#ffffff"
+		context.fillRect (90, b, 45, 45)
+		context.fillStyle = "#000000"
+		context.fillRect (135, b, 45, 45)
+		context.fillStyle = "#ffffff"
+		context.fillRect (180, b, 45, 45)
+		context.fillStyle = "#000000"
+		context.fillRect (225, b, 45, 45)
+		context.fillStyle = "#ffffff"
+		context.fillRect (270, b, 45, 45)
+		context.fillStyle = "#000000"
+		context.fillRect (315, b, 45, 45)
+	}
+	a = a + 45
+	b = b + 45
+  }
+}
+
+
+
+</script>
+</body>
+</html>
